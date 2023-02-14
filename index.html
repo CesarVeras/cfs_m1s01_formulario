@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+			min-height: 100vh;
+			margin: 0;
+			background-color: #515151;
+		}
+		
+		label {
+			font-weight: 500;
+		}
+
+		body > div {
+			height: 100vh;
+			display: grid;
+			place-items: center;
+		}
+
+		input, textarea {
+			font-family: inherit;
+			color: inherit;
+		}
+		
+		form {
+			place-content: center;
+			gap: .5rem 1rem;
+			background-color: tomato;
+			padding: 1rem;
+			border-radius: 5px;
+			width: 80%;
+			max-width: 650px;
+			box-shadow: 0 0 5px 1px rgba(0 0 0 / .8)
+		}
+
+		form, .grid {
+			display: grid;
+			grid-template-columns: auto 1fr;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form action="">
+			<label for="nome">Nome</label>
+			<input type="text" name="nome" id="nome">
+			<label for="sobrenome">Sobrenome</label>
+			<input type="text" name="sobrenome" id="sobrenome">
+			<label for="email">E-mail</label>
+			<input type="email" name="email" id="email">
+			<label for="nascimento">Data de Nascimento</label>
+			<input type="date" name="nascimento" id="nascimento">
+			<label for="cor">Cor favorita</label>
+			<input type="color" name="cor" id="cor">
+			<label for="genero">Gênero</label>
+			<div class="grid">
+				<input type="radio" name="genero">
+				Masculino
+				<input type="radio" name="genero">
+				Feminino
+				<input type="radio" name="genero">
+				Gênero fluido
+				<input type="radio" name="genero">
+				Não binário
+				<input type="radio" name="genero">
+				Outro
+			</div>
+			<label for="escolaridade">Escolaridade</label>
+			<div class="grid">
+				<input type="checkbox" name="escolaridade" id="">
+				Ensino fundamental completo
+				<input type="checkbox" name="escolaridade" id="">
+				Ensino médio completo
+				<input type="checkbox" name="escolaridade" id="">
+				Ensino superior completo
+			</div>
+			<label for="foto">Foto</label>
+			<input type="file" name="foto" id="foto">
+	
+		</form>
+	</div>
+</body>
+</html>
